@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список дел</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="todo">
+    <h1 class="todo__title">Список моих дел:</h1>
+    <form class="todo__form">
+      <p class="noteForEmptyList">Можете отдохнуть. Текущий список дел пуст:)</p>
+      <ol class="todo__list">
+      </ol>
+      <input class="form__input" type="text" placeholder="Запишите новую задачу" required pattern="^[^\s]+(\s.*)?$">
+      <button class="form__btn-priority" type="button">Обычная задача</button>
+      <button class="form__btn-add" type="submit">Добавить в список</button>
+    </form>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

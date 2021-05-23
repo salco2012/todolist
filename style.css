@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+ }
+ 
+ body {
+   font-family: "Verdana", "Tahoma", sans-serif;
+   font-style: 16px;
+   padding: 0;
+   margin: 0;
+ }
+ 
+ .todo {
+   background-color: #F0F0F0;
+   max-width: 800px;
+   margin: 50px auto;
+   padding-bottom: 20px;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.30);
+ }
+
+ .todo__title {
+   color: #fff;
+   background-color: #18C8FF;
+   padding: 11px 20px;
+   margin: 0;
+ }
+ 
+ .form__input{
+   width: 95%;
+   height: 40px;
+   display: block;
+   margin: 0 auto;
+   font-size: inherit;
+   outline: none;
+   padding: 0 10px;
+   margin-bottom: 20px;
+ }
+ 
+ .form__btn-priority{
+   display: block;
+   position: relative;
+   margin: 0 0 20px 20px;
+   font-size: 18px;
+   width: 210px;
+   height: 40px;
+   border: none;
+   color: #18C8FF;
+   cursor: pointer;
+ }
+ 
+ .form__btn-priority:hover{
+   background-color: rgb(233, 235, 251);
+ }
+ 
+ .form__btn-priority::before{
+   content: url('img/arrow1.png');
+   position: absolute;
+   left: 10px;
+   top: 10px;
+ }
+ 
+ .form__btn-priority.is-important{
+   color: #FFAD32;
+ }
+ 
+ .form__btn-priority.is-important::before{
+   content: url('img/arrow2.png');
+ }
+ 
+ .form__btn-add{
+ display: block;
+ margin: 0 0 0 20px;
+ font-size: 18px;
+ width: 210px;
+ height: 40px;
+ border: none;
+ background-color: #18C8FF;
+ color: #fff;
+ cursor: pointer;
+ }
+ 
+ .todo__list{ 
+   counter-reset: myCounter;
+   padding: 0;
+   margin: 0 0 20px 0;
+ }
+ 
+ .todo__list li {
+ color: #18C8FF;
+ background-color: #fff;
+ padding: 10px 10px;
+ list-style: none;
+ margin-bottom: 1px;
+ }
+ 
+ li.is-important{
+ color: #fff;
+ background-color: #FFAD32;
+ }
+ 
+ li.is-important::before{
+   border: 1px solid #fff;
+ }
+ 
+ li::before {
+   counter-increment: myCounter;
+   content: counter(myCounter);
+   color: inherit;
+   border: 1px solid #18C8FF;
+   border-radius: 50%;
+   display: inline-block;
+   text-align: center;
+   margin: 5px 10px;
+   line-height: 30px;
+   min-width: 30px;
+   min-height: 30px;
+ }
+ 
+ li {
+  display: flex;
+  align-items: center;  
+  word-break: break-word;
+ }
+ 
+ .btn-del {
+   word-break: normal;
+   margin-left: auto;
+   background-color: red;
+   border: 1px solid rgb(102, 0, 0);
+   color: white;
+   cursor: pointer;
+   padding: 5px 15px;
+ }
+
+.noteForEmptyList{
+  color: #a1a09d;
+  padding-left: 20px;
+}
+
+.no-show {
+  display: none;
+}
